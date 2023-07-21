@@ -1,0 +1,17 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  # apt-get install git
+  - name: Install the package git
+    apt:
+      name: git
+      state: present
+  # apt-get install wget
+  - name: Install the package wget
+    apt:
+      name: wget
+      state: present
+
+  
+   

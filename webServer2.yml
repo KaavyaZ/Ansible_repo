@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: uninstall the package apache2 from Ansible Node01
+    apt:
+     name: apache2
+     state: absent
