@@ -13,7 +13,14 @@
      state: started
     when: ansible_os_family== "Debian"
   - name: i want to install webserver on Ansible_Node02_amazon
-    yum:
+    dnf:
       name: httpd
       state: present
+    when: ansible_os_family=="RedHat"
+  - name: i want to start the webserver on Ansible_Node02_amazon
+    service:
+      name: httpd
+      state: started
+    when: ansible_os_family== "RedHat"
+
   
