@@ -1,15 +1,19 @@
 ---
 - hosts: all
-  become: yes
+  become: true
   tasks:
-  - name: install the package apache2
+  - name: install the package apache2 on Ansible_Node01(ubuntu)
     apt:
      name: apache2
      state: present
     when: ansible_os_family== "Debian"
-  - name: i want to start the webServer
+  - name: i want to start the webServer on Ansible_Node01(ubuntu)
     service:
      name: apache2
      state: started
     when: ansible_os_family== "Debian"
+  - name: i want to install webserver on Ansible_Node02_amazon
+    yum:
+      name: httpd
+      state: present
   
