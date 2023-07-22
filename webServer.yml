@@ -6,8 +6,8 @@
     apt:
      name: apache2
      state: present
-  - name: i want to stop the webServer
+  - name: i want to start the webServer
     service:
      name: apache2
-     state: stopped
+     state: started
   
