@@ -2,21 +2,25 @@
 - hosts: webServers
   become: true
   tasks:
+  
   - name: install the package apache2 on Ansible_Node01(ubuntu)
     apt:
      name: "{{webPackonUbuntu}}"
      state: present
     when: ansible_os_family== "Debian"
+  
   - name: i want to start the webServer on Ansible_Node01(ubuntu)
     service:
      name: "{{webPackonUbuntu}}"
      state: started
     when: ansible_os_family== "Debian"
+  
   - name: i want to install webserver on Ansible_Node02_amazon
     dnf:
       name: "{{webPackonRedhat}}"
       state: present
     when: ansible_os_family=="RedHat"
+  
   - name: i want to start the webserver on Ansible_Node02_amazon
     service:
       name: "{{webPackonRedhat}}"
