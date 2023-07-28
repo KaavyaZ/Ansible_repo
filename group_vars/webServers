@@ -1,3 +1,6 @@
 ---
 webPackonUbuntu: apache2
 webPackonRedhat: httpd
+
+javaPackage_ubuntu: openjdk-8-jre
+javaPackage_redhat: java-1.8.0-openjdk
