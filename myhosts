@@ -5,6 +5,4 @@
 [appServer]
 35.166.162.120
 
-[webServers:vars]
-webPackonUbuntu= apache2
-webPackonRedhat= httpd
+
