@@ -1,0 +1,10 @@
+---
+- hosts: 172.31.24.73
+  become: true
+  tasks:
+  - name: executing a linux command directly
+    command: hostname -f
+    register: display
+  - name: display the result of previous task
+    debug:
+     msg: "{{display}}" 
