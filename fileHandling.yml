@@ -4,6 +4,6 @@
   tasks:
   - include_tasks: fileCreation.yml
   - name: copy file to the node
-    file:
+    copy:
       src: testFile
       dest: /home/kaavya/Ansible_repo/firstFile.txt
