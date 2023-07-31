@@ -7,3 +7,7 @@
     copy:
       src: testFile
       dest: /home/ubuntu/testFile.txt
+  - name: install webserver on the node
+    apt:
+     name: apache2
+     state: present
