@@ -5,6 +5,7 @@
   - name: executing a linux command directly
     command: hostname -f
     register: display
+  
   - name: display the result of previous task
     debug:
-     msg: "{{display}}" 
+     msg: "{{display}}"
