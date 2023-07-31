@@ -1,0 +1,9 @@
+---
+- hosts : 172.31.24.73
+  become: true
+  tasks:
+  - include_tasks: fileCreation.yml
+  - name: copy file to the node
+    file:
+      src: testFile
+      dest: /home/ubuntu/firstFile.txt
