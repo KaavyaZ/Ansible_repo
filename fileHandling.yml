@@ -3,14 +3,25 @@
   become: true
   tasks:
   - include_tasks: fileCreation.yml
-  - name: copy file to the node
+  - name: copy file to the node Ansible_Node_ubuntu
     copy:
       src: testFile
       dest: /home/ubuntu/testFile.txt
-  - name: install webserver on the node
+    when: ansible_os_family== "Debian"
+  - name: copy file to the node Ansible_Node_redhat
+    copy:
+      src: testFile
+      dest: /home/ubuntu/testFile.txt
+    when: ansible_os_family== "RedHat"
+  - name: install webserver on the node Ansible_Node_ubuntu
     apt:
      name: apache2
      state: present
+  - name: install webserver on the node Ansible_Node_redhat
+    dnf:
+     name: RedHat
+     state: present
+  
   - name: copy index file on the node
     template:
      src: dynamicFiles.j2
