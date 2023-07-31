@@ -1,5 +1,5 @@
 ---
-- hosts : 172.31.18.125
+- hosts : webServers
   become: true
   tasks:
   - include_tasks: fileCreation.yml
