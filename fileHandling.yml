@@ -6,4 +6,4 @@
   - name: copy file to the node
     copy:
       src: testFile
-      dest: /kaavya/Ansible_repo/firstFile.txt
+      dest: /home/ubuntu/firstFile.txt

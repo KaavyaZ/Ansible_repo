@@ -1,5 +1,5 @@
 ---
    - name: create a file
      file: 
-       path: /kaavya/Ansible_repo/firstFile.txt
+       path: /home/ubuntu/firstFile.txt
        state: touch
