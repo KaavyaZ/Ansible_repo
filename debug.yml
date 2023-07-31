@@ -9,3 +9,15 @@
   - name: display the result of previous task
     debug:
      msg: "{{display}}"
+  
+  - name: install git on the node
+    apt:
+     name: git
+     state: present
+    when: display.stderr==""
+  
+  - name: install tree on the node
+    apt:
+     name: tree
+     state: present
+    when: display.stderr!=""
