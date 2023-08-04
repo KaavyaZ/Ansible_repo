@@ -1,5 +1,5 @@
 ---
-- hosts: 172.31.31.215
+- hosts: webServers
   become: true
   tasks:
   
