@@ -1,5 +1,5 @@
 ---
-- hosts: 172.31.18.125
+- hosts: 172.31.31.215
   become: true
   tasks:
   - name: executing a linux command directly
