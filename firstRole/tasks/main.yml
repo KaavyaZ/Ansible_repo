@@ -1,2 +1,6 @@
 ---
 # tasks file for firstRole
+- name: install webserver on node
+  apt:
+   name: apache2
+   state: present
